@@ -5,14 +5,14 @@ namespace LocalNavi.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<LocalNavi.DAL.NaviContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<LocalNavi.DAL.Navi>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(LocalNavi.DAL.NaviContext context)
+        protected override void Seed(LocalNavi.DAL.Navi context)
         {
             //  This method will be called after migrating to the latest version.
 

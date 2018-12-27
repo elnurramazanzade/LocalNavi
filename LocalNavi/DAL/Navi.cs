@@ -7,12 +7,10 @@ using System.Web;
 
 namespace LocalNavi.DAL
 {
-    public class NaviContext : DbContext
+    public class Navi : DbContext
     {
-        public NaviContext() : base("NaviContext")
-        {
-
-        }
+        public Navi() : base("NaviContext") { }
+        public DbSet<Admin> Admins { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<CategoryService> CategoryServices { get; set; }
         public DbSet<City> Cities { get; set; }

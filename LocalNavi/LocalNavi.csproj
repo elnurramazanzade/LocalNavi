@@ -126,16 +126,23 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Manage\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Manage\ManageAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="DAL\NaviContext.cs" />
+    <Compile Include="DAL\Navi.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201812261742220_first.cs" />
-    <Compile Include="Migrations\201812261742220_first.Designer.cs">
-      <DependentUpon>201812261742220_first.cs</DependentUpon>
+    <Compile Include="Migrations\201812262021225_NaviDatabase.cs" />
+    <Compile Include="Migrations\201812262021225_NaviDatabase.Designer.cs">
+      <DependentUpon>201812262021225_NaviDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812271645241_Admin.cs" />
+    <Compile Include="Migrations\201812271645241_Admin.Designer.cs">
+      <DependentUpon>201812271645241_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryService.cs" />
     <Compile Include="Models\City.cs" />
@@ -216,8 +223,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Manage\Models\" />
+    <Folder Include="Areas\Manage\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Manage\Views\web.config" />
+    <Content Include="Areas\Manage\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\Manage\Views\Admin\Login.cshtml" />
     <None Include="packages.config" />
     <Content Include="Public\fonts\fontawesome-webfont.eot" />
     <Content Include="Public\fonts\fontawesome-webfont.ttf" />
@@ -238,8 +250,11 @@
     <Content Include="Public\scss\style.scss" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812261742220_first.resx">
-      <DependentUpon>201812261742220_first.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812262021225_NaviDatabase.resx">
+      <DependentUpon>201812262021225_NaviDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812271645241_Admin.resx">
+      <DependentUpon>201812271645241_Admin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

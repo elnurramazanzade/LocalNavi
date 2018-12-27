@@ -7,13 +7,13 @@ namespace LocalNavi.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class first : IMigrationMetadata
+    public sealed partial class Admin : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(first));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Admin));
         
         string IMigrationMetadata.Id
         {
-            get { return "201812261742220_first"; }
+            get { return "201812271645241_Admin"; }
         }
         
         string IMigrationMetadata.Source

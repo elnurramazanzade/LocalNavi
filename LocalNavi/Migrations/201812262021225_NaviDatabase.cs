@@ -3,7 +3,7 @@ namespace LocalNavi.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class first : DbMigration
+    public partial class NaviDatabase : DbMigration
     {
         public override void Up()
         {
@@ -26,8 +26,8 @@ namespace LocalNavi.Migrations
                         ServiceID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Categories", t => t.CategoryID, cascadeDelete: false)
-                .ForeignKey("dbo.Services", t => t.ServiceID, cascadeDelete: false)
+                .ForeignKey("dbo.Categories", t => t.CategoryID, cascadeDelete: true)
+                .ForeignKey("dbo.Services", t => t.ServiceID, cascadeDelete: true)
                 .Index(t => t.CategoryID)
                 .Index(t => t.ServiceID);
             
@@ -49,8 +49,8 @@ namespace LocalNavi.Migrations
                         ServiceID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Places", t => t.PlaceID, cascadeDelete: false)
-                .ForeignKey("dbo.Services", t => t.ServiceID, cascadeDelete: false)
+                .ForeignKey("dbo.Places", t => t.PlaceID, cascadeDelete: true)
+                .ForeignKey("dbo.Services", t => t.ServiceID, cascadeDelete: true)
                 .Index(t => t.PlaceID)
                 .Index(t => t.ServiceID);
             
@@ -73,9 +73,9 @@ namespace LocalNavi.Migrations
                         UserID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Categories", t => t.CategoryID, cascadeDelete: false)
-                .ForeignKey("dbo.Cities", t => t.CityID, cascadeDelete: false)
-                .ForeignKey("dbo.Users", t => t.UserID, cascadeDelete: false)
+                .ForeignKey("dbo.Categories", t => t.CategoryID, cascadeDelete: true)
+                .ForeignKey("dbo.Cities", t => t.CityID, cascadeDelete: true)
+                .ForeignKey("dbo.Users", t => t.UserID, cascadeDelete: true)
                 .Index(t => t.CategoryID)
                 .Index(t => t.CityID)
                 .Index(t => t.UserID);
@@ -102,7 +102,7 @@ namespace LocalNavi.Migrations
                         UserID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Places", t => t.PlaceID, cascadeDelete: false)
+                .ForeignKey("dbo.Places", t => t.PlaceID, cascadeDelete: true)
                 .ForeignKey("dbo.Users", t => t.UserID, cascadeDelete: false)
                 .Index(t => t.PlaceID)
                 .Index(t => t.UserID);
@@ -116,7 +116,7 @@ namespace LocalNavi.Migrations
                         Photo = c.String(maxLength: 200),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Comments", t => t.CommentID, cascadeDelete: false)
+                .ForeignKey("dbo.Comments", t => t.CommentID, cascadeDelete: true)
                 .Index(t => t.CommentID);
             
             CreateTable(
@@ -129,7 +129,7 @@ namespace LocalNavi.Migrations
                         Type = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Comments", t => t.CommentID, cascadeDelete: false)
+                .ForeignKey("dbo.Comments", t => t.CommentID, cascadeDelete: true)
                 .ForeignKey("dbo.Users", t => t.UserID, cascadeDelete: false)
                 .Index(t => t.CommentID)
                 .Index(t => t.UserID);
@@ -155,7 +155,7 @@ namespace LocalNavi.Migrations
                         PlaceID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Places", t => t.PlaceID, cascadeDelete: false)
+                .ForeignKey("dbo.Places", t => t.PlaceID, cascadeDelete: true)
                 .Index(t => t.PlaceID);
             
             CreateTable(
@@ -169,7 +169,7 @@ namespace LocalNavi.Migrations
                         PlaceID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Places", t => t.PlaceID, cascadeDelete: false)
+                .ForeignKey("dbo.Places", t => t.PlaceID, cascadeDelete: true)
                 .Index(t => t.PlaceID);
             
         }
