@@ -153,7 +153,6 @@ D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\bin\System.Web.WebPages.Razor.xm
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\bin\Newtonsoft.Json.xml
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\bin\Antlr3.Runtime.pdb
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.csprojAssemblyReference.cache
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.csproj.CoreCompileInputs.cache
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.csproj.CopyComplete
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.dll
@@ -243,3 +242,5 @@ C:\Users\Elnur\Desktop\LocalNavi\LocalNavi\obj\Debug\LocalNavi.Migrations.NaviDa
 C:\Users\Elnur\Desktop\LocalNavi\LocalNavi\obj\Debug\LocalNavi.csproj.GenerateResource.cache
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.Migrations.NaviDatabase.resources
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.Migrations.Admin.resources
+D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.Migrations.Init.resources
+D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.csprojAssemblyReference.cache

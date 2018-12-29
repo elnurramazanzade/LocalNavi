@@ -10,9 +10,10 @@ namespace LocalNavi.Models
     {
         public int Id { get; set; }
 
+        [Required]
         public int CommentID { get; set; }
 
-        [StringLength(200)]
+        [StringLength(200), Required]
         public string Photo { get; set; }
 
         public virtual Comment Comment { get; set; }

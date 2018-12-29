@@ -10,7 +10,7 @@ namespace LocalNavi.Models
     {
         public int Id { get; set; }
 
-        [StringLength(50)]
+        [StringLength(50), Required]
         public string Name { get; set; }
 
         public List<CategoryService> CategoryServices { get; set; }

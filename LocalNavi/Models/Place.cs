@@ -13,19 +13,19 @@ namespace LocalNavi.Models
 
         public bool Status { get; set; }
 
-        [StringLength(100)]
+        [StringLength(100), Required]
         public string Name { get; set; }
 
-        [StringLength(100)]
+        [StringLength(100), Required]
         public string Slogan { get; set; }
 
-        [Column(TypeName = "ntext")]
+        [Column(TypeName = "ntext"), Required]
         public string Desc { get; set; }
 
-        [StringLength(100)]
+        [StringLength(100), Required]
         public string Address { get; set; }
 
-        [StringLength(50)]
+        [StringLength(50), Required]
         public string Phone { get; set; }
 
         [StringLength(50)]
@@ -37,10 +37,13 @@ namespace LocalNavi.Models
         [StringLength(50)]
         public string Lng { get; set; }
 
+        [Required]
         public int CategoryID { get; set; }
 
+        [Required]
         public int CityID { get; set; }
 
+        [Required]
         public int UserID { get; set; }
 
         public virtual Category Category { get; set; }
