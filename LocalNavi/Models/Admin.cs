@@ -8,6 +8,12 @@ namespace LocalNavi.Models
 {
     public class Admin
     {
+        public enum RoleType : byte
+        {
+            SuperAdmin = 1,
+            Admin = 2
+        }
+
         public int Id { get; set; }
 
         [StringLength(50), Required]
@@ -16,7 +22,13 @@ namespace LocalNavi.Models
         [StringLength(100), Required]
         public string Password { get; set; }
 
+        [StringLength(50), Required]
+        public string Name { get; set; }
+
+        [StringLength(50), Required]
+        public string Surname { get; set; }
+
         [Required]
-        public byte Role { get; set; }
+        public RoleType Role { get; set; }
     }
 }

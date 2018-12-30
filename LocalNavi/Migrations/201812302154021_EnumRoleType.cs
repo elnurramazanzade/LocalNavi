@@ -1,0 +1,16 @@
+namespace LocalNavi.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class EnumRoleType : DbMigration
+    {
+        public override void Up()
+        {
+        }
+        
+        public override void Down()
+        {
+        }
+    }
+}

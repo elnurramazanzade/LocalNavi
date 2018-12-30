@@ -11,6 +11,7 @@ namespace LocalNavi.Models
     {
         public int Id { get; set; }
 
+        [Required]
         public bool Status { get; set; }
 
         [StringLength(100), Required]

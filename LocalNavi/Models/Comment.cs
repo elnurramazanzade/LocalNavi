@@ -10,6 +10,9 @@ namespace LocalNavi.Models
     {
         public int Id { get; set; }
 
+        [Required]
+        public bool Status { get; set; }
+
         public short Rating { get; set; }
 
         [StringLength(140), Required]

@@ -145,6 +145,14 @@
     <Compile Include="Migrations\201812291617148_Init.Designer.cs">
       <DependentUpon>201812291617148_Init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812302013496_Status.cs" />
+    <Compile Include="Migrations\201812302013496_Status.Designer.cs">
+      <DependentUpon>201812302013496_Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812302154021_EnumRoleType.cs" />
+    <Compile Include="Migrations\201812302154021_EnumRoleType.Designer.cs">
+      <DependentUpon>201812302154021_EnumRoleType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Category.cs" />
@@ -162,6 +170,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Manage\Public\css\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Public\css\bootstrap-formhelpers.css" />
@@ -234,7 +243,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Manage\Models\" />
-    <Folder Include="Areas\Manage\Public\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Manage\Views\web.config" />
@@ -270,6 +278,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812291617148_Init.resx">
       <DependentUpon>201812291617148_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812302013496_Status.resx">
+      <DependentUpon>201812302013496_Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812302154021_EnumRoleType.resx">
+      <DependentUpon>201812302154021_EnumRoleType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
