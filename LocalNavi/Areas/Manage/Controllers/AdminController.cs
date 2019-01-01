@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using LocalNavi.DAL;
 using LocalNavi.Models;
 using System.Web.Helpers;
+using LocalNavi.Helper;
 
 namespace LocalNavi.Areas.Manage.Controllers
 {
@@ -34,8 +35,8 @@ namespace LocalNavi.Areas.Manage.Controllers
             {
                 if (Crypto.VerifyHashedPassword(adm.Password, admin.Password))
                 {
+                    Session["Admin"] = adm.Name + " " + adm.Surname;
                     Session["AdminLogin"] = true;
-                    Session["Admin"] = adm;
                     return RedirectToAction("login", "admin");
                 }
             }
@@ -45,9 +46,17 @@ namespace LocalNavi.Areas.Manage.Controllers
         }
 
         // GET: Manage/Login
+        [AuthAdmin]
         public ActionResult Login()
         {
             return View();
+        }
+
+        // GET: Manage/Logout
+        public ActionResult Logout()
+        {
+            Session["AdminLogin"] = null;
+            return RedirectToAction("index");
         }
     }
 }

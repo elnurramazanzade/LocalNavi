@@ -243,6 +243,6 @@ C:\Users\Elnur\Desktop\LocalNavi\LocalNavi\obj\Debug\LocalNavi.csproj.GenerateRe
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.Migrations.NaviDatabase.resources
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.Migrations.Admin.resources
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.Migrations.Init.resources
-D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.csprojAssemblyReference.cache
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.Migrations.Status.resources
 D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.Migrations.EnumRoleType.resources
+D:\REO\COD\Back-end\ASP.net\LocalNavi\LocalNavi\obj\Debug\LocalNavi.csprojAssemblyReference.cache

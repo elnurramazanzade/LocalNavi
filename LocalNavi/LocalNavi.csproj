@@ -127,12 +127,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Manage\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Manage\Controllers\CategoriesController.cs" />
     <Compile Include="Areas\Manage\ManageAreaRegistration.cs" />
+    <Compile Include="Controllers\AddPlaceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DAL\Navi.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\AuthAdmin.cs" />
+    <Compile Include="Helper\AuthUser.cs" />
     <Compile Include="Migrations\201812262021225_NaviDatabase.cs" />
     <Compile Include="Migrations\201812262021225_NaviDatabase.Designer.cs">
       <DependentUpon>201812262021225_NaviDatabase.cs</DependentUpon>
@@ -176,6 +180,7 @@
     <Content Include="Public\css\bootstrap-formhelpers.css" />
     <Content Include="Public\css\bootstrap-formhelpers.min.css" />
     <Content Include="Public\css\bootstrap.min.css" />
+    <Content Include="Public\css\custom.css" />
     <Content Include="Public\css\font-awesome.min.css" />
     <Content Include="Public\css\magnific-popup.css" />
     <Content Include="Public\css\metisMenu.min.css" />
@@ -220,6 +225,7 @@
     <Content Include="Public\js\jquery-3.2.1.min.js" />
     <Content Include="Public\js\jquery.magnific-popup.js" />
     <Content Include="Public\js\jquery.min.js" />
+    <Content Include="Public\js\main.js" />
     <Content Include="Public\js\metisMenu.min.js" />
     <Content Include="Public\js\owl.carousel.js" />
     <Content Include="Public\js\popper.min.js" />
@@ -250,6 +256,11 @@
     <Content Include="Areas\Manage\Views\Admin\Login.cshtml" />
     <Content Include="Areas\Manage\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Manage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Manage\Views\Categories\Create.cshtml" />
+    <Content Include="Areas\Manage\Views\Categories\Delete.cshtml" />
+    <Content Include="Areas\Manage\Views\Categories\Details.cshtml" />
+    <Content Include="Areas\Manage\Views\Categories\Edit.cshtml" />
+    <Content Include="Areas\Manage\Views\Categories\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Public\fonts\fontawesome-webfont.eot" />
     <Content Include="Public\fonts\fontawesome-webfont.ttf" />
@@ -268,6 +279,7 @@
     <Content Include="Public\fonts\themify.woff" />
     <Content Include="Public\js\swiper.min.js.map" />
     <Content Include="Public\scss\style.scss" />
+    <Content Include="Views\AddPlace\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201812262021225_NaviDatabase.resx">
