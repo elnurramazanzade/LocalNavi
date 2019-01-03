@@ -170,6 +170,7 @@
     <Compile Include="Models\Reaction.cs" />
     <Compile Include="Models\Service.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\ViewPlace.cs" />
     <Compile Include="Models\WorkHour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -203,6 +204,12 @@
     <Content Include="Public\images\bootstrap-formhelpers-currencies.flags.png" />
     <Content Include="Public\images\bootstrap-formhelpers-googlefonts.png" />
     <Content Include="Public\images\business-icon.svg" />
+    <Content Include="Public\images\Cities\baku.jpg" />
+    <Content Include="Public\images\Cities\lenkeran.jpg" />
+    <Content Include="Public\images\Cities\lerik.jpg" />
+    <Content Include="Public\images\Cities\quba.jpg" />
+    <Content Include="Public\images\Cities\seki.jpg" />
+    <Content Include="Public\images\Cities\yevlax.jpg" />
     <Content Include="Public\images\credit.png" />
     <Content Include="Public\images\enjoy-icon.svg" />
     <Content Include="Public\images\favicon.png" />
@@ -249,6 +256,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Manage\Models\" />
+    <Folder Include="Public\images\Places\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Manage\Views\web.config" />
