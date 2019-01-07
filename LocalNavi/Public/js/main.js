@@ -12,7 +12,7 @@
                 strong: 'Güclü'
             };
 
-            $('input[id="password"]').displayPasswordStrength(optionalConfig);
+            $("#password").displayPasswordStrength(optionalConfig);
         }
 
     });
@@ -43,5 +43,33 @@
             }
         });
     });
-    
+
+    $("#AddNewPlace").submit(function (ev) {
+        ev.preventDefault();
+        var form = $(this);
+
+        var formData = {
+            UserID: form.find("input[name='UserID']").val(),
+            Name: form.find("input[name='Name']").val(),
+            Slogan: form.find("input[name='Slogan']").val(),
+            CategoryID: form.find("select[name='CategoryID']").val(),
+            Phone: form.find("input[name='Phone']").val(),
+            CityID: form.find("select[name='CityID']").val(),
+            Address: form.find("input[name='Address']").val(),
+            Website: form.find("input[name='Website']").val(),
+            Desc: form.find("textarea[name='Desc']").val(),
+        }
+
+        $.ajax({
+            url: form.attr("action"),
+            type: form.attr("method"),
+            dataType: "json",
+            data: formData,
+            success: function (response) {
+                console.log(response);
+            }
+        })
+
+    });
+
 });

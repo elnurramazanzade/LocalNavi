@@ -45,6 +45,7 @@ namespace LocalNavi.Controllers
         public ActionResult Logout()
         {
             Session["UserLogin"] = null;
+            Session["UserId"] = null;
             return RedirectToAction("index");
         }
 

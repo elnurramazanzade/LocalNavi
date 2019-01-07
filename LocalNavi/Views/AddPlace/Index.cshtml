@@ -26,7 +26,8 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="listing-wrap">
-                    <form action="#">
+                    <form id="AddNewPlace" action="@Url.Action("addnewplace","addplace")" method="post">
+                        <input type="hidden" name="UserID" value="@Session["UserId"]" />
                         <!-- General Information -->
                         <div class="listing-title">
                             <span class="ti-files"></span>
@@ -37,21 +38,21 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Adı</label>
-                                    <input type="text" class="form-control add-listing_form">
+                                    <label for="Name">Adı *</label>
+                                    <input name="Name" id="Name" type="text" class="form-control add-listing_form" data-validation="server" data-validation-url="@Url.Action("checkplace","addplace")" value="Meşəbəyi">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Devizi</label>
-                                    <input type="text" class="form-control add-listing_form">
+                                    <label for="Slogan">Devizi *</label>
+                                    <input name="Slogan" id="Slogan" type="text" class="form-control add-listing_form" value="Meşələri qoruyaq">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="CategoryID">Xidmət növü</label>
+                                    <label for="CategoryID">Xidmət növü *</label>
                                     <select class="form-control add-listing_form" name="CategoryID" id="CategoryID">
                                         <option value="0" selected>Seçin</option>
                                         @foreach (var item in Model.Categories)
@@ -63,8 +64,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Telefon</label>
-                                    <input type="text" class="form-control add-listing_form">
+                                    <label for="Phone">Telefon *</label>
+                                    <input name="Phone" id="Phone" type="text" class="form-control add-listing_form" value="0123456789">
                                 </div>
                             </div>
                         </div>
@@ -78,7 +79,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="CityID">Şəhər seçin</label>
+                                    <label for="CityID">Şəhər seçin *</label>
                                     <select class="form-control add-listing_form" name="CityID" id="CityID">
                                         <option value="0" selected>Seçin</option>
                                         @foreach (var item in Model.Cities)
@@ -90,8 +91,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Ünvanı yazın</label>
-                                    <input type="text" class="form-control add-listing_form">
+                                    <label for="Address">Ünvanı yazın *</label>
+                                    <input name="Address" id="Address" type="text" class="form-control add-listing_form" value="26 km">
                                 </div>
                             </div>
                         </div>
@@ -105,22 +106,22 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label>Website</label>
-                                    <input type="text" class="form-control add-listing_form">
+                                    <label for="Website">Website *</label>
+                                    <input name="Website" id="Website" type="text" class="form-control add-listing_form" value="www.mesebeyi.az">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Facebook</label>
-                                    <input type="text" class="form-control add-listing_form">
+                                    <input type="text" class="form-control add-listing_form" disabled>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Haqqında</label>
-                                    <textarea class="form-control add-listing_form" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <label for="Desc">Haqqında *</label>
+                                    <textarea class="form-control add-listing_form" name="Desc" id="Desc" rows="3">Kurort</textarea>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +139,7 @@
                                         <i class="ti-gallery"></i>
                                         <span>Sürüşdürüb bura atın</span>
                                     </div>
-                                    <input type="file" class="custom-file-input" id="customFile">
+                                    <input type="file" class="custom-file-input" name="Photo" id="Photo">
                                 </div>
                             </div>
                         </div>
@@ -164,12 +165,12 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <label for="WeekDay_@i" class="listing-time">@ViewBag.WeekDays[i - 1]</label>
-                                    <input type="hidden" name="WeekDay_@i" value="@i" />
+                                    <input type="hidden" id="WeekDay_@i" value="@i" />
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <select class="form-control">
-                                            <option selected>Açılış saatı</option>
+                                        <select class="form-control" id="OpenHour_@i">
+                                            <option value="0" selected>Açılış saatı</option>
                                             @for (byte j = 6; j <= 15; j++)
                                             {
                                                 <option value="@j">@j:00</option>
@@ -179,8 +180,8 @@
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <select class="form-control">
-                                            <option selected>Bağlanış saatı</option>
+                                        <select class="form-control" id="CloseHour_@i">
+                                            <option value="0" selected>Bağlanış saatı</option>
                                             @for (byte j = 12; j <= 23; j++)
                                             {
                                                 <option value="@j">@j:00</option>
