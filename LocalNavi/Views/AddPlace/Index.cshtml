@@ -39,13 +39,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Name">Adı *</label>
-                                    <input name="Name" id="Name" type="text" class="form-control add-listing_form" data-validation="server" data-validation-url="@Url.Action("checkplace","addplace")" value="Meşəbəyi">
+                                    <input name="Name" id="Name" type="text" class="form-control add-listing_form" data-validation="server" data-validation-url="@Url.Action("checkplace","addplace")">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Slogan">Devizi *</label>
-                                    <input name="Slogan" id="Slogan" type="text" class="form-control add-listing_form" value="Meşələri qoruyaq">
+                                    <input name="Slogan" id="Slogan" type="text" class="form-control add-listing_form">
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Phone">Telefon *</label>
-                                    <input name="Phone" id="Phone" type="text" class="form-control add-listing_form" value="0123456789">
+                                    <input name="Phone" id="Phone" type="text" class="form-control add-listing_form">
                                 </div>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Address">Ünvanı yazın *</label>
-                                    <input name="Address" id="Address" type="text" class="form-control add-listing_form" value="26 km">
+                                    <input name="Address" id="Address" type="text" class="form-control add-listing_form">
                                 </div>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Website">Website *</label>
-                                    <input name="Website" id="Website" type="text" class="form-control add-listing_form" value="www.mesebeyi.az">
+                                    <input name="Website" id="Website" type="text" class="form-control add-listing_form">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -121,7 +121,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="Desc">Haqqında *</label>
-                                    <textarea class="form-control add-listing_form" name="Desc" id="Desc" rows="3">Kurort</textarea>
+                                    <textarea class="form-control add-listing_form" name="Desc" id="Desc" rows="3"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                             <p>Xidmət sahəsinə uyğun təklif edilən əlavə xidmətləri qeyd edin</p>
                         </div>
                         <div class="row" id="CheckboxServices">
-
+                            <div class="col-md-12 responsive-wrap text-center">Xidmət növü seçin!</div>
                         </div>
                         <!--//End Amenities -->
                         <!-- Opening Hours -->
@@ -165,11 +165,11 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <label for="WeekDay_@i" class="listing-time">@ViewBag.WeekDays[i - 1]</label>
-                                    <input type="hidden" id="WeekDay_@i" value="@i" />
+                                    <input type="hidden" name="WeekDay_@i" id="WeekDay_@i" value="@i" />
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <select class="form-control" id="OpenHour_@i">
+                                        <select class="form-control" name="OpenHour_@i" id="OpenHour_@i">
                                             <option value="0" selected>Açılış saatı</option>
                                             @for (byte j = 6; j <= 15; j++)
                                             {
@@ -180,7 +180,7 @@
                                 </div>
                                 <div class="col-md-5">
                                     <div class="form-group">
-                                        <select class="form-control" id="CloseHour_@i">
+                                        <select class="form-control" name="CloseHour_@i" id="CloseHour_@i">
                                             <option value="0" selected>Bağlanış saatı</option>
                                             @for (byte j = 12; j <= 23; j++)
                                             {

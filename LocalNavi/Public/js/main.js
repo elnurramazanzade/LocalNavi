@@ -19,8 +19,10 @@
 
     $("#CategoryID").change(function () {
 
+        var form = $(this);
+
         $.ajax({
-            url: "addplace/servicesjson/" + $(this).val(),
+            url: "addplace/servicesjson/" + form.val(),
             type: "get",
             dataType: "json",
             success: function (services) {
@@ -32,8 +34,8 @@
                 } else {
                     $.each(services, function (index, item) {
                         div = `<div class="col-md-4 responsive-wrap">
-                                    <div class="md-checkbox">
-                                        <input id="i${item.ServiceID}" type="checkbox">
+                                    <div class="md-checkbox" id="Checkboxes">
+                                        <input name="i${item.ServiceID}" id="i${item.ServiceID}" type="checkbox">
                                         <label for="i${item.ServiceID}">${item.Name}</label>
                                     </div>
                                 </div>`;
@@ -46,8 +48,17 @@
 
     $("#AddNewPlace").submit(function (ev) {
         ev.preventDefault();
-        var form = $(this);
-
+        
+        $.each($("#CheckboxServices").find("input"), function (index, item) {
+            if ($(item).is(":checked")) {
+                var placeService = {
+                    PlaceID: 1,
+                    ServiceID: $(item).attr("id")
+                }
+                console.log(placeService);
+            }
+        })
+        
         var formData = {
             UserID: form.find("input[name='UserID']").val(),
             Name: form.find("input[name='Name']").val(),
